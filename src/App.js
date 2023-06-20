@@ -11,7 +11,7 @@ function App() {
           <Sidebar/>
         </div>
         <div className="col-9">
-          home
+          
         </div>
       </div>
     </div>
