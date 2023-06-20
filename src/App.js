@@ -1,10 +1,21 @@
+import Navbar from "./components/layouts/Navbar";
+import Sidebar from "./components/layouts/Sidebar";
 
 
 function App() {
   return (
     <div className="container">
-      <h1>Hello World</h1>
+      <Navbar/>
+      <div className="row">
+        <div className="col-3">
+          <Sidebar/>
+        </div>
+        <div className="col-9">
+          home
+        </div>
+      </div>
     </div>
+
   );
 }
 
