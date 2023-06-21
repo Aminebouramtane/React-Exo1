@@ -1,9 +1,8 @@
-import React from 'react'
 
 const EditProduct = () => {
   return (
     <>
-
+      <h1>Edit product</h1>
     </>
   )
 }

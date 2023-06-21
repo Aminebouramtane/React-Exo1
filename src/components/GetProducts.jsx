@@ -4,10 +4,9 @@ const GetProducts = (props) => {
   console.log(props.data);
   const products = props.data;
   return (
-    <>
+    <div className='row'>
       {products && products.map((product) => {
         return (
-          <div className="row" key={product.id}>
             <div className="card col-4">
               <img className="card-img-top" src={product.image} alt="Card image cap" />
               <div className="card-body">
@@ -18,10 +17,9 @@ const GetProducts = (props) => {
                 <small className="text-muted">${product.price}</small>
               </div>
             </div>
-          </div>
         );
       })}
-    </>
+    </div>
   );
 }
 

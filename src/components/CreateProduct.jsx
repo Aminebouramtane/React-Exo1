@@ -14,9 +14,9 @@ const CreateProduct = () => {
     const handleCheckboxChange = (event) => {
         const { value, checked } = event.target;
         if (checked) {
-          setCheck((prevCheck) => [...prevCheck, value]);
+          setCheck([...check, value]);
         } else {
-          setCheck((prevCheck) => prevCheck.filter((item) => item !== value));
+          setCheck(check.filter((item) => item !== value));
         }
       };
     const handelRadio =(event)=>{

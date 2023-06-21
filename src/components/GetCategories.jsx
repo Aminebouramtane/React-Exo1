@@ -1,8 +1,15 @@
 import React from 'react'
 
-const GetCategories = () => {
+const GetCategories = (props) => {
   return (
-    <div>GetCategories</div>
+    <>
+      {props.data&&props.data.map(
+        (value)=>{
+          return(<button type="button" class="btn btn-dark">Dark</button>);
+        }
+      )}
+
+    </>
   )
 }
 
