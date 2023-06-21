@@ -11,11 +11,11 @@ import ListProducts from "./components/ListProducts";
 
 function App() {
   const[data,setData]=useState("");
-  const url = "http://localhost:9000/products";
+  // const url = "http://localhost:9000/products";
 
   useEffect(()=>{
 
-    fetch(url)
+    fetch("https://fakestoreapi.com/products/")
     .then(res=>res.json())
     .then(data=>setData(data));
 
@@ -31,11 +31,10 @@ function App() {
         <div className="col-9">
           <Routes>
             <Route path="/" element={<GetProducts data={data}/>}/>
-            <Route path="/products" element={<ListProducts data={data}/>}>
-              <Route path="/byCategory" element={<GetCategories/>}/>
-              <Route path="/create" element={<CreateProduct/>}/>
-              <Route path="/edit" element={<EditProduct/>}/>
-            </Route>
+            <Route path="/products" element={<ListProducts data={data}/>}/>
+            <Route path="products/byCategory" element={<GetCategories/>}/>
+            <Route path="products/create" element={<CreateProduct/>}/>
+            <Route path="/edite" element={<EditProduct/>}/>
           </Routes>
         </div>
       </div>
