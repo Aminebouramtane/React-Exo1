@@ -1,32 +1,34 @@
 import React, { useState } from 'react'
 
-const CreateProduct = () => {
+const CreateProduct = (props) => {
 
     const[title,setTitle]=useState("");
     const[price,setPrice]=useState(0);
     const[description,setDescription]=useState("");
     const[category,setCategory]=useState("");
-    const[image,setImage]=useState("");
-    const[select,setSelect]=useState("");
-    const[check,setCheck]=useState([]);
-    const[radio,setRadio]=useState("");
+    const[image,setImage]=useState(props.data);
+    const dataP = props.data;
+    // const[select,setSelect]=useState("");
+    // const[check,setCheck]=useState([]);
+    // const[radio,setRadio]=useState("");
 
-    const handleCheckboxChange = (event) => {
-        const { value, checked } = event.target;
-        if (checked) {
-          setCheck([...check, value]);
-        } else {
-          setCheck(check.filter((item) => item !== value));
-        }
-      };
-    const handelRadio =(event)=>{
-        const {value,checked}=event.target;
-        if(checked){
-            setRadio(value);
-        }else{
-            setRadio("");
-        }
-    }
+    // const handleCheckboxChange = (event) => {
+    //     const { value, checked } = event.target;
+    //     if (checked) {
+    //       setCheck([...check, value]);
+    //     } else {
+    //       setCheck(check.filter((item) => item !== value));
+    //     }
+    //   };
+    // const handelRadio =(event)=>{
+    //     const {value,checked}=event.target;
+    //     if(checked){
+    //         setRadio(value);
+    //     }else{
+    //         setRadio("");
+    //     }
+    // }
+
       
 
   return (
@@ -50,12 +52,12 @@ const CreateProduct = () => {
                   <label for="inputAddress2">Category</label>
                   <input type="text" className="form-control" id="inputAddress2" autocomplete="off" onChange={e=>{setCategory(e.target.value)}} placeholder="Apartment, studio, or floor"/>
               </div><br />
-              <div className="form-row">
+              {/* <div className="form-row">
                   <div className="form-group col-md-6">
                       <label for="inputCity">Image</label>
                       <input type="text" className="form-control" autocomplete="off" onChange={e=>{setImage(e.target.value)}} id="inputCity"/>
-                  </div><br />
-                  <div className="form-group col-md-4">
+                  </div><br /> */}
+                  {/* <div className="form-group col-md-4">
                       <label for="inputState">State</label>
                       <select id="inputState" onChange={e=>{setSelect(e.target.value)}} className="form-control">
                           <option selected>Choose...</option>
@@ -66,9 +68,9 @@ const CreateProduct = () => {
                           <option value="opt-5">opt-5</option>
                           <option value="opt-6">opt-6</option>
                       </select>
-                  </div>
-              </div><br />
-              <div className="form-group">
+                  </div> */}
+              {/* </div><br /> */}
+              {/* <div className="form-group">
                 <div className="row">
                     <div className="col-6">
                           <div className="form-check">
@@ -123,17 +125,17 @@ const CreateProduct = () => {
 <br />
                     </div>
                 </div>
-              </div><br />
-              <button type="submit" className="btn btn-primary">Sign in</button>
+              </div><br /> */}
+              <button className="btn btn-primary">Sign in</button>
           </form>
-          <div>{title}</div>
+          {/* <div>{title}</div>
           <div>{price}</div>
           <div>{description}</div>
           <div>{category}</div>
-          <div>{image}</div>
           <div>{select}</div>
           <div>{check}</div>
-          <div>{radio}</div>
+        <div>{radio}</div> */}
+        <div>{image}</div>
     </>
   )
 }

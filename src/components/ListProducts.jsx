@@ -26,7 +26,7 @@ const ListProducts = (props) => {
                                 {/* <td>{val.description}</td> */}
                                 <td>{val.category}</td>
                                 <td>
-                                    <Link className="btn btn-info" to="/details">Show</Link>
+                                    <Link className="btn btn-info" to={`/details/${val.id}`}>Show</Link>
                                     <Link className="btn btn-warning" to="/edite">Edit</Link>
                                     <Link className="btn btn-danger">Delete</Link>
                                 </td>
