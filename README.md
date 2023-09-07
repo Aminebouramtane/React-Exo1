@@ -1,2 +1,2 @@
 # React-Exo1
-React
+exercice React
